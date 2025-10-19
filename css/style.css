@@ -80,16 +80,16 @@ nav a:hover {
 /* Layout de Grid Principal */
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
 }
 
-.grid-col-span-2 {
-    grid-column: span 2;
+.grid-col-span-1 {
+    grid-column: span 1;
 }
 
 @media (max-width: 1200px) {
-    .grid-col-span-2 {
+    .grid-col-span-1 {
         grid-column: span 1;
     }
 }
@@ -157,13 +157,6 @@ nav a:hover {
 .subject-item:hover {
     background-color: var(--color-dark-green);
 }
-
-.see-more {
-    display: block;
-    text-align: right;
-    margin-top: 10px;
-}
-
 .placeholder-card {
     display: flex;
     justify-content: center;
@@ -271,14 +264,6 @@ nav a:hover {
 .absence-item .topic {
     flex: 2;
 }
-
-/* Página de Configurações */
-.config-list .subject-item {
-    cursor: default;
-}
-.config-list .subject-item:hover {
-    background-color: var(--color-medium-green);
-}
 /* teste começou daqui
 /* Adicione este código no final do arquivo css/style.css */
 
@@ -288,59 +273,6 @@ nav a:hover {
     gap: 15px;
     margin-bottom: 25px; /* Adiciona um espaço antes do grid principal */
 }
-
-.nav-button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: var(--color-blue);
-    color: white;
-    font-weight: 500;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.nav-button:hover {
-    background-color: #0056b3; /* Um tom de azul mais escuro */
-    transform: translateY(-2px); /* Efeito de "levantar" o botão */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-/* ========================================= */
-/* ESTILOS PÁGINA DETALHE DA DISCIPLINA      */
-/* ========================================= */
-
-.detail-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    margin-top: 20px;
-}
-
-.metric-cards-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.metric-card {
-    flex: 1;
-    text-align: center;
-    padding: 15px;
-}
-
-.metric-card p {
-    margin: 0 0 5px 0;
-    font-size: 14px;
-    color: var(--text-light);
-}
-
-.metric-card h2 {
-    margin: 0;
-    font-size: 36px;
-    color: var(--text-dark);
-}
-
 footer {
     background-color: var(--bg-white);  /* Mudança: fundo branco como o cabeçalho */
     color: var(--text-dark);            /* Mudança: texto escuro padrão */
@@ -353,36 +285,5 @@ footer {
 .footer-content p {
     margin: 0 0 10px 0;
     font-size: 14px;
-    color: var(--text-light); /* Usando uma cor de texto mais suave para o parágrafo */
+    color: var(--text-light);
 }
-
-.footer-links a {
-    color: var(--color-blue);           /* Mudança: links com a cor azul principal do site */
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 13px;
-    transition: text-decoration 0.3s;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;         /* Mudança: efeito de sublinhar ao passar o mouse */
-}
-
-        /* Ajuste para o CABEÇALHO em telas menores */
-@media (max-width: 992px) {
-        header {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        align-items: center;    /* Centraliza os itens */
-        gap: 15px;              /* Adiciona um espaço entre os itens empilhados */
-}
-
-    nav a {
-        margin: 0 10px; /* Remove a margem apenas da esquerda e centraliza o espaçamento */
-    }
-
-    .search-bar {
-            width: 90%;         /* Faz a barra de busca ocupar mais espaço */
-            max-width: 400px;   /* Define um limite para não ficar grande demais */
-    }
-}
-
